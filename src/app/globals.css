@@ -25,9 +25,74 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+* {
+  scroll-behavior: smooth;
+  font-family: "catamaran", sans-serif;
+}
+@font-face {
+  font-family: catamaran;
+  src: local(catamaran),
+    url(assets/fonts/Catamaran-Medium.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: catamaran;
+  src: local(catamaran),
+    url(assets/fonts/Catamaran-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
 
+@font-face {
+  font-family: catamaran;
+  src: local(catamaran),
+    url(assets/fonts/Catamaran-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: catamaran;
+  src: local(catamaran),
+    url(assets/fonts/Catamaran-Black.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: catamaran;
+  src: local(catamaran),
+    url(assets/fonts/Catamaran-Thin.ttf) format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: catamaran;
+  src: local(catamaran),
+    url(assets/fonts/Catamaran-Light.ttf) format("truetype");
+  font-weight: 200;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .padding-x{
+    @apply px-sm md:px-md lg:px-lg xl:px-xl 2xl:px-2xl
+  }
+  /* customscrollbar */
+  /* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d7dce0;
+  border-radius: 0.625rem;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #969696;
+}
+/* width */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
 }
